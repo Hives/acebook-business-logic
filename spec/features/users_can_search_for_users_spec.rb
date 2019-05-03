@@ -76,4 +76,15 @@ RSpec.feature "Search", type: :feature do
     click_button "Submit"
     expect(page).to have_content("Testing")
   end
+
+  scenario "Search is case insensitive" do
+    sign_up username: "UsEr1", email: "user1@gmail.com"
+    sign_up username: "uSeR2", email: "user2@gmail.com"
+    sign_up username: "uSEr3", email: "user3@gmail.com"
+    fill_in "user_search", with: "User"
+    click_button "Go"
+    expect(page).to have_content("UsEr1")
+    expect(page).to have_content("uSeR2")
+    expect(page).to have_content("uSEr3")
+  end
 end

@@ -17,7 +17,7 @@ class User < ApplicationRecord
   has_secure_password
 
   def self.search_emails_and_usernames(query)
-    self.where("username LIKE ? ", "%#{query}%")
+    self.where("lower(username) LIKE ? ", "%#{query.downcase}%")
   end
 
 end
