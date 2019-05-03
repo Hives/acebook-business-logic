@@ -2,11 +2,7 @@
 
 class PostsController < ApplicationController
   def index
-    if params[:user_id] != nil
-      @wall_owner = User.find(params[:user_id])
-    elsif params[:username] != nil
-      @wall_owner = User.find_by(username: params[:username])
-    end
+    @wall_owner = User.find_by(username: params[:username])
     @posts = Post.where("recipient_id = ?", @wall_owner.id).reverse
   end
 
