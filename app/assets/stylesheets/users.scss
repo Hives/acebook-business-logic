@@ -2,16 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #user_search_results {
-  color: #133783;
   font-size: 1.25em;
   line-height: 40px;
   a {
     text-decoration: none;
     &:hover {
       text-decoration: underline;
-    }
-    &:visited {
-      color: #133783;
     }
   }
 }
