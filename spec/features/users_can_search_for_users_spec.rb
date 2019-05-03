@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
 RSpec.feature "Search", type: :feature do
@@ -46,7 +48,7 @@ RSpec.feature "Search", type: :feature do
 
   scenario "Search a user then visit their page" do
     sign_up username: "arthur", email: "user1@gmail.com"
-    create_post on_wall_of: "arthur", message: "Testing" 
+    create_post on_wall_of: "arthur", message: "Testing"
     sign_up username: "bob", email: "user2@gmail.com"
     fill_in "user_search", with: "arthur"
     click_button "Go"

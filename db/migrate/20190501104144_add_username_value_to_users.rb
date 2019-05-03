@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddUsernameValueToUsers < ActiveRecord::Migration[5.1]
   def change
     i = 0
