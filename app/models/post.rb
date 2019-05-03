@@ -13,7 +13,7 @@ class Post < ApplicationRecord
 
   private
 
-  def less_than_ten_minutes_old?
-    created_at > 10.minutes.ago
-  end
+    def less_than_ten_minutes_old?
+      created_at > 10.minutes.ago
+    end
 end

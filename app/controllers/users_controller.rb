@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     query = params[:user_search]
     @search_results = User.search_emails_and_usernames(query)
   end
-  
+
   def new
   end
 
@@ -22,13 +22,11 @@ class UsersController < ApplicationController
       user.save
       log_in(user)
       flash[:success] = "New account created"
-      redirect_to "/#{current_user.username}" and return
+      redirect_to("/#{current_user.username}") && (return)
     else
       flash[:danger] = user.errors.full_messages.join("<br>")
     end
 
     redirect_to root_path
   end
-
-
 end

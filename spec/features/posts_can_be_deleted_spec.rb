@@ -41,7 +41,7 @@ RSpec.feature "Deleting posts", type: :feature do
       sign_up username: "user1", email: "user1@gmail.com"
       create_post on_wall_of: "user1"
       expect(page).to have_content("Hello m0m")
-      click_link('Remove')
+      click_link("Remove")
     end
 
     scenario "The post gets deleted" do

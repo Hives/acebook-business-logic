@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   validates :username, presence: true,
                        uniqueness: { case_sensitive: false }
- 
+
   validates :email, presence: true,
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
@@ -19,5 +19,4 @@ class User < ApplicationRecord
   def self.search_emails_and_usernames(query)
     self.where("lower(username) LIKE ? ", "%#{query.downcase}%")
   end
-
 end

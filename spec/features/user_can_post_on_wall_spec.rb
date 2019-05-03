@@ -3,7 +3,7 @@
 require "rails_helper"
 
 RSpec.feature "Post on wall", type: :feature do
-  context "User 2 can post on user 1's wall" do  
+  context "User 2 can post on user 1's wall" do
     before do
       sign_up username: "user1", email: "user1@gmail.com"
       sign_up username: "user2", email: "user2@gmail.com"
