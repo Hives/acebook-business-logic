@@ -93,6 +93,27 @@ body {
   margin: 110px 80px 0;
 }
 
+#user_search_results {
+  color: #133783;
+  font-size: 1.25em;
+  line-height: 40px;
+  list-style: none;
+  text-align: center;
+}
+
+#user_search_results a {
+  text-decoration: none;
+}
+
+#user_search_results a:hover {
+  text-decoration: underline;
+}
+
+#user_search_results a:visited {
+  color: #133783;
+}
+
+
 input[type=text], input[type=password], input[type=email], textarea {
   width: 100%;
   padding: 10px;

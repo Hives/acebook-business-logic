@@ -2,10 +2,10 @@
 <% if @search_results.empty? %>
   No users found
 <% else %>
-  <ul>
+  <ul id="user_search_results">
     <% @search_results.each do |user| %>
       <li>
-        <%= user.username %>
+        <%= link_to "#{user.username}", "/#{user.username}" %>
       </li>
     <% end %>
   </ul>
