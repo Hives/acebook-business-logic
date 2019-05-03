@@ -1,7 +1,7 @@
-<h1><%= @user.username.capitalize %>'s Wall</h1>
+<h1><%= @wall_owner.username.capitalize %>'s Wall</h1>
 
 <div class="new-post-button">
-  <%= link_to new_post_path(recipient_id: @user.id), class: "btn btn-primary" do %>
+  <%= link_to new_post_path(recipient_id: @wall_owner.id), class: "btn btn-primary" do %>
     Create new post
   <% end %>
 </div>

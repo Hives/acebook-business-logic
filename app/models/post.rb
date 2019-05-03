@@ -6,7 +6,6 @@ class Post < ApplicationRecord
 
   belongs_to :recipient, class_name: "User"
   delegate :username, to: :recipient, prefix: :recipient
-  delegate :id, to: :recipient, prefix: :recipient
 
   def editable?
     less_than_ten_minutes_old?
