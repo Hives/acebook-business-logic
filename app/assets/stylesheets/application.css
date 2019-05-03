@@ -199,6 +199,15 @@ textarea {
   margin-bottom:2px;
 }
 
+.post-author a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-author a:hover {
+  text-decoration: underline;
+}
+
 .post-published-time {
   font-size: 0.8rem;
   font-family: Helvetica;
