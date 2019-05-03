@@ -15,9 +15,17 @@
       <div id="title">
         <h1>acebook</h1>
       </div>
+      <% if session[:user_id] %>
+        <div id="user-search">
+          <%= form_tag("/users", method: "get") do %>
+            <%= text_field_tag :user_search, nil, placeholder: "Search for users" %>
+            <%= submit_tag "Go", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      <% end %>
       <nav id="main_nav">
         <ul>
-          <% if session[:user_id] %>
+          <% if current_user %>
             <li>
               <%= link_to "My wall", "/#{current_user.username}" %>
             </li>

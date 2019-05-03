@@ -15,4 +15,9 @@ class User < ApplicationRecord
   validates :password, length: { in: 6..10 }
 
   has_secure_password
+
+  def self.search_emails_and_usernames(query)
+    self.where("lower(username) LIKE ? ", "%#{query.downcase}%")
+  end
+
 end

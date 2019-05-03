@@ -3,6 +3,11 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
 
+  def index
+    query = params[:user_search]
+    @search_results = User.search_emails_and_usernames(query)
+  end
+  
   def new
   end
 
@@ -24,4 +29,6 @@ class UsersController < ApplicationController
 
     redirect_to root_path
   end
+
+
 end
