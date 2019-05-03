@@ -2,12 +2,8 @@
 
 class PostsController < ApplicationController
   def index
-    if params[:user_id] != nil
-      @user = User.find(params[:user_id])
-    elsif params[:username] != nil
-      @user = User.find_by(username: params[:username])
-    end
-    @posts = Post.where("recipient_id = ?", @user.id).reverse
+    @wall_owner = User.find_by(username: params[:username])
+    @posts = Post.where("recipient_id = ?", @wall_owner.id).reverse
   end
 
   def new
@@ -35,7 +31,7 @@ class PostsController < ApplicationController
       return redirect_to "/#{post.recipient_username}"
     end
 
-    if post.update(post_params.merge(recipient_id: post.recipient_id))
+    if post.update(post_params)
       redirect_to "/#{post.recipient_username}"
     else
       render "edit"

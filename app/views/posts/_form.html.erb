@@ -1,7 +1,6 @@
-
 <%= form_for @post do |form| %>
   <%= form.label :message %>
   <%= form.text_area :message %>
-  <%= form.hidden_field :recipient_id, value: params[:recipient_id] %>
+  <%= form.hidden_field :recipient_id, value: @post.recipient_id || params[:recipient_id] %>
   <%= form.submit "Submit", class: "btn btn-primary" %>
 <% end %>
