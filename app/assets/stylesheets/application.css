@@ -89,10 +89,6 @@ body {
   margin: 30px auto 0 auto;
 }
 
-#single_form {
-  margin: 110px 80px 0;
-}
-
 
 input[type=text], input[type=password], input[type=email], textarea {
   width: 100%;
