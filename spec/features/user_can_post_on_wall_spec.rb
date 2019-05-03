@@ -23,4 +23,12 @@ RSpec.feature "Post on wall", type: :feature do
       expect(page).not_to have_content ("Hello user1, from user2")
     end
   end
+
+  scenario "The post's author's name links to their wall" do
+    sign_up username: "user1", email: "user1@gmail.com"
+    sign_up username: "user2", email: "user2@gmail.com"
+    create_post on_wall_of: "user1", message: "This is a message"
+    click_link "user2"
+    expect(page).to have_content "User2's Wall"
+  end
 end
