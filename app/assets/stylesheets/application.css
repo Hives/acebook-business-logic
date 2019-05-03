@@ -59,6 +59,7 @@ body {
 }
 
 #user-search input {
+  margin: 0;
   width: inherit;
 }
 
@@ -194,6 +195,15 @@ textarea {
   color: #365899;
   text-decoration:none;
   margin-bottom:2px;
+}
+
+.post-author a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-author a:hover {
+  text-decoration: underline;
 }
 
 .post-published-time {
