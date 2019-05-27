@@ -33,7 +33,6 @@ This is a team proejct clone of Facebook built using Ruby on Rails, a challenge 
 
 ## Product Roadmap
 
-### Card Wall
 See our awesome card wall [here](https://trello.com/b/6XSi28FM/acebook-by-business-logic).
 
 ## User stories
@@ -41,7 +40,7 @@ See our awesome card wall [here](https://trello.com/b/6XSi28FM/acebook-by-busine
 See the user stories we implemented [here](user-stories.md).
 
 ## Learning Documentation
-Our learnings can be found on our team wiki [here](https://github.com/Hives/acebook-business-logic/wiki).]
+Our learnings can be found on our team wiki [here](https://github.com/Hives/acebook-business-logic/wiki).
 
 ## Product Owner Feedback (Michael)
 We asked for confirmation that a decision we were making was in line with business requirements (Goal: I can justify my decisions in a business context)

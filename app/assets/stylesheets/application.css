@@ -59,6 +59,8 @@ body {
 }
 
 #user-search input {
+  padding: 4px 8px;
+  font-size: 0.8rem;
   margin: 0;
   width: inherit;
 }
