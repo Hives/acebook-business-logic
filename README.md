@@ -11,7 +11,7 @@
 
 ----
 ## Description
-This is a team proejct clone of Facebook built using Ruby on Rails, a challenge set by Makers Academy. The original repo can be found [here](https://github.com/makersacademy/course/tree/master/engineering_projects/rails).
+This is a team project clone of Facebook built using Ruby on Rails, a challenge set by Makers Academy. The original repo can be found [here](https://github.com/makersacademy/course/tree/master/engineering_projects/rails).
 
 ## Getting Started
 ```bash
